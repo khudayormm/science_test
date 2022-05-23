@@ -48,8 +48,8 @@
       <div>
         <h6>Ism va Familiya:</h6>
       </div>  
-      <p><input class="input" placeholder="First name..." oninput="this.className = 'input-text'" name="fname"></p>
-      <p><input class="input" placeholder="Last name..." oninput="this.className = 'input-text'" name="lname"></p>
+      <p><input class="input" placeholder="First name..." oninput="this.className = 'input-text'" name="firstname"></p>
+      <p><input class="input" placeholder="Last name..." oninput="this.className = 'input-text'" name="lastname"></p>
     </div>
     <div class="tab">
       <div>
@@ -60,18 +60,43 @@
     </div>
     <div class="tab">
       <div>
-        <h6>Other:</h6>
+        <h6>Tug'ilgan sana:</h6>
       </div>  
-      <p><input class="input" placeholder="dd" oninput="this.className = 'input-text'" name="dd"></p>
-      <p><input class="input" placeholder="mm" oninput="this.className = 'input-text'" name="nn"></p>
-      <p><input class="input" placeholder="yyyy" oninput="this.className = 'input-text'" name="yyyy"></p>
+      <p><input type="date" class="input" placeholder="dd" oninput="this.className = 'input-text'" name="birthday"></p>
+      <div>
+        <h6>Jinsi:</h6>
+      </div>  
+      <p>
+        <select class="input" placeholder="yyyy" oninput="this.className = 'input-text'" name="gender">
+          <option value=""></option>
+          <option value="erkak">Erkak</option>
+          <option value="ayol">Ayol</option>
+          <!-- <option value="boshqa">Boshqa</option> -->
+        </select>
+      </p>
+      
+      <div>
+        <h6>Viloyat:</h6>
+      </div>  
+      <p>
+        <select class="input" placeholder="yyyy" oninput="this.className = 'input-text'" name="province">
+          <option value=""></option>
+          <option value="toshkent">Toshkent</option>
+          <option value="andijon">Andijon</option>
+          <option value="buxoro">Buxoro</option>
+          <option value="fargona">Farg'ona</option>
+          <option value="jizzah">Jizzax</option>
+          <option value="namangan">Namangan</option>
+          <!-- <option value="boshqa">Boshqa</option> -->
+        </select>
+      </p>
     </div>
     <div class="tab">
       <div>
         <h6>Login Info:</h6>
       </div>  
-      <p><input class="input" placeholder="Username..." oninput="this.className = 'input-text'" name="uname"></p>
-      <p><input class="input" placeholder="Password..." oninput="this.className = 'input-text'" name="pword" type="password"></p>
+      <p><input class="input" placeholder="Username..." oninput="this.className = 'input-text'" name="username"></p>
+      <p><input class="input" placeholder="Password..." oninput="this.className = 'input-text'" name="password" type="password"></p>
     </div>
     <div style="overflow:auto;">
       <div style="float:right;">

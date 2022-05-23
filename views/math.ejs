@@ -3,11 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Test ishalash</title>
     <script src="https://kit.fontawesome.com/423bb2823d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="bootstrap-5\css\bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <script src="assets/jquery/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  
+    <script>
+      $(document).ready(function() {
+
+      })
+    </script>
+  
   </head>
   <body>
       
@@ -36,44 +44,47 @@
 
 
 
-    <% questions.forEach((item) => { %>
-      <div class="test-content container  mt-4 mb-5">
-        <div class="test-content row">
-                      <div class="col-12">
+    <form method="post">
+
+      <% questions.forEach((item, index) => { %>
+        <div class="test-content container  mt-4 mb-5">
+          <div class="test-content row">
+            <div class="col-12">
                         <div class="row">
                           <div class="col-md-8 col-sm-12 pt-3 question-text">                              
-                            <span><%=item.id%>-savol</span> <p class="fw-bold"> <%=item.question%> </p>
+                            <span><%=item.id%>-savol</span>
+                             <p class="fw-bold"> <%=item.question%> </p>
                           </div>
                           <div class="col-md-4 col-sm-12 question-image">                              
-                                  <img src="<%=item.que_logo%>" width="250px" height="185px" alt="">
-                                </div>
-                                
-                              </div>
-                      <div>
-                        
+                            <img src="<%=item.que_logo%>" width="250px" height="185px" alt="">
+                          </div>
+                           
+                        </div>
+                        <div>
+                          
                         <div class="col-12 mt-2 mb-2">
                           <div>
-                            <input type="radio" name="box" id="one" />
-                            <input type="radio" name="box" id="two" />
-                            <input type="radio" name="box" id="three" />
-                            <input type="radio" name="box" id="four" />
-                            <label for="one" class="box first">
-                            <div class="course">
-                              <span class="circle"> </span>
-                              <span class="subject">
-                                <%=item.variant_a%>
-                              </span>
-                            </div>
-                          </label>
-                          <label for="two" class="box second">
-                            <div class="course">
-                              <span class="circle"></span>
-                              <span class="subject">
-                                <%=item.variant_b%>
-                              </span>
-                            </div>
-                          </label>
-                          <label for="three" class="box third">
+                            <input type="radio" name="q<%=item.id%>" value="<%=item.variant_a%>" class="one" id="<%=item.variant_a%>" />
+                            <input type="radio" name="q_<%=item.id%>" value="<%=item.variant_b%>" class="two" id="<%=item.variant_b%>" />
+                            <input type="radio" name="q_<%=item.id%>" value="<%=item.variant_c%>" class="three" id="<%=item.variant_c%>" />
+                            <input type="radio" name="q_<%=item.id%>" value="<%=item.variant_d%>" class="four" id="<%=item.variant_d%>" />
+                            <label for="<%=item.variant_a%>" class="box first">
+                              <div class="course">
+                                <span class="circle"> </span>
+                                <span class="subject">   
+                                  <%=item.variant_a%>
+                                </span>
+                              </div>
+                            </label>
+                            <label for="<%=item.variant_b%>" class="box second">
+                              <div class="course">
+                                <span class="circle"></span>
+                                <span class="subject">
+                                  <%=item.variant_b%>
+                                </span>
+                              </div>
+                            </label>
+                          <label for="<%=item.variant_c%>" class="box third">
                             <div class="course">
                               <span class="circle"></span>
                               <span class="subject">
@@ -81,13 +92,14 @@
                               </span>
                             </div>
                           </label>
-                          <label for="four" class="box forth">
+                          <label for="<%=item.variant_d%>" class="box forth">
                             <div class="course">
                               <span class="circle"></span>
                               <span class="subject"> 
-                                <%=item.variant_c%>    
+                                <%=item.variant_d%>    
                               </span>
                             </div>
+
                           </label>
                         </div>
                       </div>
@@ -99,9 +111,12 @@
               </div>
               <% }); %>
               
+              <div class="send-btn-check">
+                <button type="submit" class="btn btn-primary">YUBORISH</button>
+              </div>
               
               
-              
+            </form>
               
               
               
@@ -162,7 +177,16 @@
                   </div>                  -->
                   
                   
-                  
+            <script>
+              const len_input = document.querySelectorAll('input[type="text"').length;
+              function check_test(element) {
+
+                for (let i = 0; i < len_input; i++) {
+                  document.getElementById(`mark_${i}`).value = element                  
+                }
+
+              } 
+            </script>      
                   
                   
                   

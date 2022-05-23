@@ -5,7 +5,7 @@ module.exports = async (req, res) => {
     
     try {
         const questions = await prisma.question.findMany()
-        res.render('work', {
+        res.render('math', {
             questions
         })
     } catch (error) {

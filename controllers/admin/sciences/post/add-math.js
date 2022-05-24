@@ -5,7 +5,10 @@ const prisma = new PrismaClient()
 
 
 module.exports = async (req, res) => {
-    const que_logo = path.basename(req.file.path) 
+    var que_logo = undefined
+    if (req.file) {
+        const que_logo = `data/uploads/${path.basename(req.file.path)}` 
+    }
 
     const { question, variant_a, variant_b, variant_c, variant_d, box } = req.body
 
@@ -18,7 +21,7 @@ module.exports = async (req, res) => {
                 variant_c,
                 variant_d,
                 correct_v: box,
-                que_logo: `data/uploads/${que_logo}` 
+                que_logo: que_logo
             }
         })
 

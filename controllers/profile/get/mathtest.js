@@ -5,10 +5,10 @@ module.exports = async (req, res) => {
     
     try {
         const questions = await prisma.question.findMany()
-        res.render('math', {
+        res.render('cabinet/tests/math', {
             questions
         })
-    } catch (error) {
+    } catch (error) { 
         console.log(error)
     }
 

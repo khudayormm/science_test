@@ -12,6 +12,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
   
 
+app.use('/', require('./routes/index'))
 app.use('/', require('./routes/user'))
 app.use('/admin', require('./routes/admin'))
 

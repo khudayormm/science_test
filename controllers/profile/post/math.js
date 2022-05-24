@@ -1,19 +1,21 @@
 const { PrismaClient } = require('@prisma/client')
 const prisma = new PrismaClient()
 
+
 module.exports = (req, res) => {
     const data = req.body
-    
     const keys = Object.keys(data)
-    console.log(keys)
- 
     const values = Object.values(data)
-    console.log(values)
 
 
-    let user_answer = keys.map((item, id) => {
-        ua_id: id
-    })
+   const user_answer = keys.map((id, index) => ({
+       ua_id: id,
+       ua: values[index]
+   }))
+
+    console.log(user_answer)
+
+
 
 
 

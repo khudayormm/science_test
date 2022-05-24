@@ -309,5 +309,12 @@ input[type="radio"] {
 
 
 
+.navigate-text {
+  text-decoration: none;
+}
+
+.navigate-text:hover {
+  color: #04AA6D;
+}
 
 

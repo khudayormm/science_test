@@ -8,6 +8,7 @@ router.get('/register', require('../controllers/render/register'))
 
 
 router.get('/math', require('../controllers/profile/get/mathtest'))
+router.get('/math', require('../controllers/profile/get/mathtest'))
 
 router.get('/score', require('../controllers/profile/get/score'))
 

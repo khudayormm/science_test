@@ -9,11 +9,13 @@ const upload = require('../middleware/upload-image')
 router.get('/', require('../controllers/admin/render/home'))
 router.get('/login', require('../controllers/admin/render/login'))
 router.get('/register', require('../controllers/admin/render/register'))
-router.get('/question', require('../controllers/admin/render/question'))
+
+router.get('/math', require('../controllers/admin/sciences/get/math'))
+router.get('/math/add', require('../controllers/admin/sciences/get/add-math'))
 
 
 
-router.post('/question', upload.single('myFfile'), require('../controllers/admin/post/question'))
+router.post('/math/add', upload.single('myFfile'), require('../controllers/admin/sciences/post/add-math'))
 
 
 module.exports = router

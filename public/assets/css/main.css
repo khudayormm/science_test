@@ -116,6 +116,24 @@ h1 {
 
 
 
+.chart-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.navigate-text {
+  text-decoration: none;
+}
+
+.navigate-text:hover {
+  color: #04AA6D;
+}
+
+
+
 .variant-input {
   border-radius: 3px;
   width: 100%;
@@ -314,8 +332,4 @@ input[type="radio"] {
     font-size: 12px;
   }
 }
-
-
-
-
 
